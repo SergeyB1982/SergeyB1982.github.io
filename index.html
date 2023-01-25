@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset='utf-8'>
+    <title>👽</title>
+    <link rel="shortcut icon" href="2605471.png">
+    <style>
+body{
+    margin: 0;
+    padding: 0;
+    width: 1280px;
+    height: 960;
+    padding-top: 5%;
+    overflow: hidden;
+    background: url(2605471.png) no-repeat center;
+    background-size: 50%;
+    font-family: Roboto mono;
+    transition: background-image, transform 3s, .5s;
+}
+#circleWrapper{
+    position: absolute;
+    display: inline-block;
+    width: 1280px;
+    height: 720px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin-top: -5%;
+    font-size: 0;
+    transition: transform, 1s;
+}
+.circle{
+    display: inline-block;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    animation: rotateY 3s infinite linear;
+    perspective: 9999px;
+    transform-origin: 50% 50% 0;
+    transform-style: preserve-3d;
+    color: silver;
+    font-family: roboto mono;
+    transition: background-color,box-shadow .5s, .2s;
+    border-radius: 50%;
+}
+.c{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-top: 1px rgba(180, 100, 150, .2) solid;
+    border-bottom: rgba(220, 19, 12, .05) solid;
+    border-left: rgba(25, 217, 0, .1) solid;
+    border-right: rgba(0, 0, 225, .1) solid;
+    border-radius: 50%;
+    line-height: 0;
+    transform-origin: 50% 50% 0;
+    backface-visibility: inherit;
+    text-shadow: 0 500px 0 silver;
+    font-size: 1.2em;
+    cursor: pointer;
+    background: transparent;
+    transition: transform,background-position,opacity,color 9s,3s,6s,1s,.5s linear;
+}
+.c0{
+    transform: rotateY(15deg);
+}
+.c1{
+    transform: rotateY(30deg);
+}
+.c2{
+    transform: rotateY(45deg);
+}
+.c3{
+    transform: rotateY(60deg);
+}
+.c4{
+    transform: rotateY(75deg);
+}
+.c5{
+    transform: rotateY(90deg);
+}
+.c6{
+    transform: rotateY(105deg);
+}
+.c7{
+    transform: rotateY(120deg);
+}
+.c8{
+    transform: rotateY(135deg);
+}
+.c9{
+    transform: rotateY(150deg);
+}
+.c10{
+    transform: rotateY(165deg);
+}
+.c11{
+    transform: rotateY(180deg);
+}
+.alert{
+    height: 50%;
+    font-size: 5em;
+    text-transform: uppercase;
+    font-family: Roboto mono;
+    background: transparent;
+    transition: background-color,text-shadow 5s,5s;
+    color: silver;
+    text-shadow: 0 0 3px aqua;
+}
+.alert>span{
+    animation: underline .3s linear infinite;
+}
+@keyframes underline{
+    from{
+        text-decoration: underline;
+    }
+    to{
+        text-decoration: none;
+    }
+}
+#message{
+    position: absolute;
+    width: 80%;
+    height: 30%;
+    margin: 40% 10%;
+    color: aqua;
+    text-align: center;
+    font-size: 5em;
+    transition: opacity 5s;
+    opacity: .1;
+    }
+#message:hover{
+    background: linear-gradient(-135deg, transparent 10%, blue 30%, transparent 40%);
+}
+@keyframes rotateY{
+    from{
+        transform: rotateY(-180deg);
+        box-shadow: 0 0 800px gold;
+    }
+    50%{
+        box-shadow: 0 0 200px silver, -200px 0 500px black, 200px 0 500px black;
+    }
+    to{
+        transform: rotateY(180deg);
+        box-shadow: 0 0 10px red, 0 0 20px rgba(255, 166, 0, 0.5), 0 0 40px yellow, 0 0 80px green, 0 0 160px rgb(0, 0, 125), 0 0 320px blue, 0 0 640px violet;
+    }
+}
+@keyframes back{
+    from{
+        transition: background-color 3s linear;
+        background: linear-gradient(-45deg, transparent 10%, blue 30%, transparent 40%);
+    }
+    50%{
+        transition: background-color 3s linear;
+        background: linear-gradient(-45deg, transparent 40%, blue 60%, transparent 80%);
+    }
+    to{
+        transition: background-color 3s linear;
+        background: linear-gradient(-45deg, transparent 50%, blue 70%, transparent 90%);
+    }
+}
+@media screen and (orientation: portrait) {
+    body{
+        transform: rotate(90deg);
+    }
+    #circleWrapper{
+    margin: -5% 50%;
+    }
+    #message, .alert{
+        transform: translateX( 50%);
+    }
+}
+    </style>
+</head>
+<body id="body">
+ <div id="circleWrapper">
+    <div class="circle">
+        <div class="c c0"></div>
+        <div class="c c1"></div>
+        <div class="c c2"></div>
+        <div class="c c3"></div>
+        <div class="c c4"></div>
+        <div class="c c5"></div>
+        <div class="c c6"></div>
+        <div class="c c7"></div>
+        <div class="c c8"></div>
+        <div class="c c9"></div>
+        <div class="c c10"></div>
+        <div class="c c11"></div>
+    </div>
+    </div>
+    <a href="tel:+79538959983">
+    <p id="message"></p>
+    </a>
+
+    <script>
+
+        let s = "✱ ✲ ✳ ✴ ✵ ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿ ❀ ❁ ❂ ❃ ❄ ❅ ❆ ❇ ❈ ❉ ❊ ❋",
+            i = 0, div = document.createElement('div'),
+            c = 0;
+        div.className = 'alert';
+        message.innerHTML = '☎ПОЗВОНИ МНЕ☏';
+        setInterval(() => {
+        div.innerHTML = s.slice(0, i) + '<span>&nbsp</span>';
+        document.body.append(div);
+        i ++;
+        if (i > s.length){
+        i = 0;
+        
+        switch (c) {
+            
+            case 1:
+            s = " ❤ Таня ❤  ❤  ❤ Aня ❤ ™  ";
+            div.setAttribute('style', 'font-size: 10em;text-align: center;background: linear-gradient(-60deg, transparent 40%, rgba(200,200,200,.8) 60%, transparent);text-shadow: 3px 3px 0 aqua;');
+            body.setAttribute('style', 'background: url(2023.jpg);');
+            circleWrapper.setAttribute('style', 'transform: translate(-100px, 80px) scale( 1.1);');
+            break;
+
+            case 2:
+            s = "пусть в твоей жизни начнёться самая светлая полоса какая только возможна         ";
+            div.setAttribute('style', 'font-size: 5em;text-align: right;background: rgba(255,255,255,1);box-shadow: 0 0 50px aqua, 0 0 20px #fff, 0 0 50px transparent;text-shadow: 0 0 20px aqua;');
+            body.setAttribute('style', 'background: url(9CDD1318-E2CA-451C-8BA8-B2D9BE21D63F-PhotoRoom_2.png) top;');
+            circleWrapper.setAttribute('style', 'transform: translate(0, 0) scale( 2);');
+            message.setAttribute('style', 'background: rgba(255, 255, 255, .7);opacity: .7;');
+
+            break;
+        
+            default:
+            c = 0;
+            s = "c новым годом, днём имени, рождения , 8-м марта и др. праздниками тебя !!!"
+            div.setAttribute('style', 'font-size: 5em;text-align: left;background: linear-gradient(30deg, transparent 40%, rgba(200,200,200,.8) 60%, transparent 80%);text-shadow: -3px -3px 0 aqua;');
+            body.setAttribute('style', 'background: url(WhatsAppImage20230124at05.18.33.jpeg);');
+            circleWrapper.setAttribute('style', 'transform: translate(-115px, 30px) scale( .75);');
+            message.setAttribute('style', 'background: transparent;opacity: .2;'); 
+            break;
+        }
+        c ++;
+        setTimeout(() => div.remove(), 200);
+        }
+        }, 250);
+        
+</script>
+</body>
+</html>
