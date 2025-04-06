@@ -160,7 +160,7 @@ body{
         background: linear-gradient(-45deg, transparent 50%, blue 70%, transparent 90%);
     }
 }
-@media screen and (orientation: portrait) {
+/*@media screen and (orientation: portrait) {
     body{
         transform: rotate(90deg);
     }
@@ -170,7 +170,7 @@ body{
     #message, .alert{
         transform: translateX( 50%);
     }
-}
+}*/
     </style>
 </head>
 <body id="body">
@@ -200,7 +200,7 @@ body{
             i = 0, div = document.createElement('div'),
             c = 0;
         div.className = 'alert';
-        //message.innerHTML = '☎ПОЗВОНИ МНЕ☏';
+        message.innerHTML = 'НихуЯнеХочуПисать0себе';
         setInterval(() => {
         div.innerHTML = s.slice(0, i) + '<span>&nbsp</span>';
         document.body.append(div);
@@ -235,7 +235,7 @@ body{
             break;
         }
         c ++;
-        setTimeout(() => div.remove(), 500);
+        //setTimeout(() => div.remove(), 500);
         }
         }, 250);
         
