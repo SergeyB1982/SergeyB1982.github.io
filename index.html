@@ -12,7 +12,7 @@ body{
     height: 960;
     padding-top: 5%;
     overflow: hidden;
-    background: /*url(2605471.png) no-repeat center*/black;
+    background: /*url(2605471.png) no-repeat center*/radial-gradient ( #000, #fff);
     background-size: 50%;
     font-family: Roboto mono;
     transition: background-image, transform 3s, .5s;
@@ -100,7 +100,7 @@ body{
 }
 .alert{
     height: 50%;
-    font-size: 5em;
+    font-size: 15em;
     text-transform: uppercase;
     font-family: Roboto mono;
     background: transparent;
@@ -109,7 +109,7 @@ body{
     text-shadow: 0 0 3px aqua;
 }
 .alert>span{
-    animation: underline .3s linear infinite;
+    animation: underline .1s linear infinite;
 }
 @keyframes underline{
     from{
@@ -131,7 +131,7 @@ body{
     opacity: .1;
     }
 #message:hover{
-    background: linear-gradient(-135deg, transparent 10%, blue 30%, transparent 40%);
+    background: linear-gradient (-135deg, transparent 10%, blue 30%, transparent 40%);
 }
 @keyframes rotateY{
     from{
@@ -149,11 +149,11 @@ body{
 @keyframes back{
     from{
         transition: background-color 3s linear;
-        background: linear-gradient(-45deg, transparent 10%, blue 30%, transparent 40%);
+        background: linear-gradient (-45deg, transparent 10%, blue 30%, transparent 40%);
     }
     50%{
         transition: background-color 3s linear;
-        background: linear-gradient(-45deg, transparent 40%, blue 60%, transparent 80%);
+        background: linear-gradient (-45deg, transparent 40%, blue 60%, transparent 80%);
     }
     to{
         transition: background-color 3s linear;
