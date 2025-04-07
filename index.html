@@ -12,7 +12,7 @@ body{
     height: 960;
     padding-top: 5%;
     overflow: hidden;
-    background: /*url(2605471.png) no-repeat center*/linear-gradient( #000, #fff);
+    background: /*url(2605471.png) no-repeat center*/transparent;
     background-size: 50%;
     font-family: Roboto mono;
     transition: background-image, transform 3s, .5s;
@@ -107,6 +107,7 @@ body{
     transition: background-color,text-shadow 5s,5s;
     color: silver;
     text-shadow: 0 0 3px aqua;
+    text-align: center;
 }
 .alert>span{
     animation: underline .3s linear infinite;
@@ -123,7 +124,7 @@ body{
     position: absolute;
     width: 80%;
     height: 30%;
-    margin: 40% -10%;
+    /*margin: 40% -10%;*/
     color: aqua;
     text-align: center;
     font-size: 5em;
@@ -138,12 +139,12 @@ body{
         transform: rotateY(-180deg);
         box-shadow: 0 0 800px gold;
     }
-    50%{
+    /*50%{
         box-shadow: 0 0 200px silver, -200px 0 500px black, 200px 0 500px black;
-    }
+    }*/
     to{
         transform: rotateY(180deg);
-        box-shadow: 0 0 10px red, 0 0 20px rgba(255, 166, 0, 0.5), 0 0 40px yellow, 0 0 80px green, 0 0 160px rgb(0, 0, 125), 0 0 320px blue, 0 0 640px violet;
+        /*box-shadow: 0 0 10px red, 0 0 20px rgba(255, 166, 0, 0.5), 0 0 40px yellow, 0 0 80px green, 0 0 160px rgb(0, 0, 125), 0 0 320px blue, 0 0 640px violet;*/
     }
 }
 @keyframes back{
