@@ -5,6 +5,7 @@
 	<style type="text/css">
 body{
     padding: 0;
+	animation: color 30s linear infinite;
 	}
 .alert{
 	font-size: 3.5em;
@@ -15,7 +16,12 @@ body{
 .alert>span{
     animation: underline .15s infinite;
 }
-
+@keyframes color{
+    to{
+        color: white;
+        background: black;
+    }
+}
 @keyframes underline{
     from{
         text-decoration: underline;
