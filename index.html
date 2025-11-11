@@ -1,4 +1,97 @@
-8<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+body{
+    padding: 0;
+	}
+.alert{
+	font-size: 3.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin-top: 200px;
+}
+.alert>span{
+    animation: underline .15s infinite;
+}
+
+@keyframes underline{
+    from{
+        text-decoration: underline;
+    }
+    to{
+        text-decoration: none;
+    }
+}
+	</style>
+</head>
+<body>
+<!--p id="S"></p>
+<p id="I"></p>
+<p id="STR"></p>
+<button id="step">STEP</button-->
+ <script>
+
+        let s = " УЛЫБОК ТЕБЕ ДЕД МАКАР ",
+            i = 0,
+            div = document.createElement('div'),
+            str = [];
+
+        div.className = 'alert';
+        /*document.getElementById('step').addEventListener('click',*/
+        setInterval(() => {
+        
+        div.innerHTML = s.slice(0, i) + '<span>&nbsp</span>';
+
+        document.body.prepend(div);
+
+        i ++;
+
+        if (i > s.length){
+
+        str = s;
+
+        s = '';
+
+        for (; i > 1; i--) {
+
+        s += str[i - 2];
+        }
+        div.remove();
+        }
+        /*S.innerHTML = '&nbsp S: ' + s;
+        I.innerHTML = '&nbsp I: ' + i;
+        STR.innerHTML = 'STR: ' + str;*/
+        }, 250);
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset='utf-8'>
@@ -192,7 +285,7 @@ body{
         <div class="c c11"></div>
     </div>
     </div>
-    <!--a href="tel:+79538959983"></a-->
+    <a href="tel:+79538959983"></a>
     <p id="message"></p>
     
 
@@ -243,4 +336,4 @@ body{
         
 </script>
 </body>
-</html>
+</html-->
