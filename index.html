@@ -3,6 +3,12 @@
 <head>
 	<title></title>
 	<style type="text/css">
+root{
+  --s: 91px; /* control the size*/
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+}
 body{
     padding: 0;
 	animation: color 8s linear infinite;
@@ -12,6 +18,12 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     margin-top: 200px;
+    background-size-size-size:
+    repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
+     calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
+    repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
+  background-size: var(--s) calc(var(--s)*tan(30deg));
+	}
 }
 .alert>span{
     animation: underline .15s infinite;
