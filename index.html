@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>HELLO<title>
+	<title></title>
+    <meta charset="utf-8">
 	<style type="text/css">
-html{
-  --s: 91px; /* control the size*/
-  --c1: #1d1d1d;
-  --c2: #4e4f51;
-  --c3: #3c3c3c;
-}
 body{
+    margin: 0;
     padding: 0;
-	animation: color 8s linear infinite;
-	}
+    animation: color 8s linear infinite;
+}
+#message{
+  height: 100vh;
+  background: linear-gradient(#f0f0ff 50%, transparent 50%);
+  background-size: 100% 20px;
+}
 .alert{
 	font-size: 3.5em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     margin-top: 200px;
-    background:
-    repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
-     calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
-    repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
-    background-size: var(--s) calc(var(--s)*tan(30deg));
-	}
 }
 .alert>span{
     animation: underline .15s infinite;
+}
+iframe{
+    position: absolute;
+    display: inline-block;
 }
 @keyframes color{
     to{
@@ -45,44 +44,30 @@ body{
 	</style>
 </head>
 <body>
-<!--p id="S"></p>
-<p id="I"></p>
-<p id="STR"></p>
-<button id="step">STEP</button-->
+<div id="message"></div>
  <script>
-
         let s = " УЛЫБОК ТЕБЕ ДЕД МАКАР ",
             i = 0,
             div = document.createElement('div'),
             str = [];
-
         div.className = 'alert';
-        /*document.getElementById('step').addEventListener('click',*/
         setInterval(() => {
-        
         div.innerHTML = s.slice(0, i) + '<span>&nbsp</span>';
-
         document.body.prepend(div);
-
         i ++;
-
         if (i > s.length){
-
         str = s;
-
         s = '';
-
         for (; i > 1; i--) {
-
         s += str[i - 2];
         }
         div.remove();
         }
-        /*S.innerHTML = '&nbsp S: ' + s;
-        I.innerHTML = '&nbsp I: ' + i;
-        STR.innerHTML = 'STR: ' + str;*/
         }, 250);
-		setTimeout(() => location.replace('https://s1eepscience.tilda.ws/'), 9000);
+        setTimeout(() => location.replace('https://s1eepscience.tilda.ws/'), 9000);
+        window.addEventListener('mousemove', function(e){
+        message.innerHTML = 'X: ' + e.offsetX + '<br>Y: ' + e.offsetY + '<br>' + navigator.appVersion; 
+        });
 </script>
 </body>
 </html>
