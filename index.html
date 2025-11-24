@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>HELLO !!!</title>
     <meta charset="utf-8">
 	<style type="text/css">
 body{
     margin: 0;
     padding: 0;
+--s: 105px; /* control the size*/
+--c1: #b9b9b9;
+--c2: #dcdcdc;
+--c3: #fafafa;
+  
+  background:
+    conic-gradient(from 75deg,var(--c1)   15deg ,var(--c2) 0 30deg ,#0000 0 180deg,
+                              var(--c2) 0 195deg,var(--c1) 0 210deg,#0000 0) 
+       calc(var(--s)/2) calc(.5*var(--s)/tan(30deg)),
+    conic-gradient(var(--c1)   30deg ,var(--c3) 0 75deg ,var(--c1) 0 90deg, var(--c2) 0 105deg,
+                   var(--c3) 0 150deg,var(--c2) 0 180deg,var(--c3) 0 210deg,var(--c1) 0 256deg,
+                   var(--c2) 0 270deg,var(--c1) 0 286deg,var(--c2) 0 331deg,var(--c3) 0);
+  background-size: var(--s) calc(var(--s)/tan(30deg));
     animation: color 8s linear infinite;
 }
 #message{
   height: 100vh;
-  background: linear-gradient(#f0f0ff 50%, transparent 50%);
-  background-size: 100% 20px;
+--s: 82px; /* control the size*/
+--c1: #b2b2b2;
+--c2: #ffffff;
+--c3: #d9d9d9;
+  
+  --_g: var(--c3) 0 120deg,#0000 0;
+  background:
+    conic-gradient(from -60deg at 50% calc(100%/3),var(--_g)),
+    conic-gradient(from 120deg at 50% calc(200%/3),var(--_g)),
+    conic-gradient(from  60deg at calc(200%/3),var(--c3) 60deg,var(--c2) 0 120deg,#0000 0),
+    conic-gradient(from 180deg at calc(100%/3),var(--c1) 60deg,var(--_g)),
+    linear-gradient(90deg,var(--c1)   calc(100%/6),var(--c2) 0 50%,
+                          var(--c1) 0 calc(500%/6),var(--c2) 0);
+  background-size: calc(1.732*var(--s)) var(--s);
 }
 .alert{
 	font-size: 3.5em;
@@ -21,18 +46,20 @@ body{
     margin-top: 200px;
 }
 .alert>span{
-    animation: underline .15s infinite;
+    animation: underline .05s infinite;
 }
 iframe{
     position: absolute;
     display: inline-block;
 }
+
 @keyframes color{
     to{
         color: white;
         background: black;
     }
 }
+
 @keyframes underline{
     from{
         text-decoration: underline;
@@ -46,28 +73,37 @@ iframe{
 <body>
 <div id="message"></div>
  <script>
-        let s = " УЛЫБОК ТЕБЕ ДЕД МАКАР ",
+
+        let s = navigator.appVersion,
             i = 0,
             div = document.createElement('div'),
             str = [];
+
         div.className = 'alert';
         setInterval(() => {
+        
         div.innerHTML = s.slice(0, i) + '<span>&nbsp</span>';
+
         document.body.prepend(div);
+
         i ++;
+
         if (i > s.length){
+
         str = s;
+
         s = '';
+
         for (; i > 1; i--) {
+
         s += str[i - 2];
         }
         div.remove();
         }
-        }, 250);
-        setTimeout(() => location.replace('https://s1eepscience.tilda.ws/'), 9000);
-        window.addEventListener('mousemove', function(e){
-        message.innerHTML = 'X: ' + e.offsetX + '<br>Y: ' + e.offsetY + '<br>' + navigator.appVersion; 
-        });
+  
+        }, 100);
+
+        setTimeout(() => location.replace('https://s1eepscience.tilda.ws/'), 18000);
 </script>
 </body>
 </html>
