@@ -1,14 +1,12 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 <head>
-	<title>HELLO !!!</title>
-    <meta charset="utf-8">
+	<title>HELLO MY FREND !!!</title>
+	<meta charset="utf-8">
 	<link rel="shortcut icon" href="name.svg">
 	<style type="text/css">
-body{
-    margin: 0;
-    padding: 0;
---s: 105px; /* control the size*/
+		*{
+--s: 95px;
 --c1: #b9b9b9;
 --c2: #dcdcdc;
 --c3: #fafafa;
@@ -21,66 +19,46 @@ body{
                    var(--c3) 0 150deg,var(--c2) 0 180deg,var(--c3) 0 210deg,var(--c1) 0 256deg,
                    var(--c2) 0 270deg,var(--c1) 0 286deg,var(--c2) 0 331deg,var(--c3) 0);
   background-size: var(--s) calc(var(--s)/tan(30deg));
-    animation: color 8s linear infinite;
-}
-#message{
-  height: 100vh;
---s: 82px; /* control the size*/
---c1: #b2b2b2;
---c2: #ffffff;
---c3: #d9d9d9;
-  
-  --_g: var(--c3) 0 120deg,#0000 0;
-  background:
-    conic-gradient(from -60deg at 50% calc(100%/3),var(--_g)),
-    conic-gradient(from 120deg at 50% calc(200%/3),var(--_g)),
-    conic-gradient(from  60deg at calc(200%/3),var(--c3) 60deg,var(--c2) 0 120deg,#0000 0),
-    conic-gradient(from 180deg at calc(100%/3),var(--c1) 60deg,var(--_g)),
-    linear-gradient(90deg,var(--c1)   calc(100%/6),var(--c2) 0 50%,
-                          var(--c1) 0 calc(500%/6),var(--c2) 0);
-  background-size: calc(1.732*var(--s)) var(--s);
-}
-.alert{
-	font-size: 3.5em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    margin-top: 200px;
-}
-.alert>span{
-    animation: underline .05s infinite;
-}
-iframe{
-    position: absolute;
-    display: inline-block;
-}
-
-@keyframes color{
-    to{
-        color: white;
-        background: black;
-    }
-}
-
-@keyframes underline{
-    from{
-        text-decoration: underline;
-    }
-    to{
-        text-decoration: none;
-    }
-}
+  transition: transform .5s linear;
+animation: color 8s linear infinite;
+		}
+		.alert{
+			background: radial-gradient(red 5%, silver 20%, transparent 25%, black 50%, lime 200%);
+			opacity: .6;
+		}
+		h1{
+		font-size: 3em;
+		text-align: center;
+		text-decoration: underline;
+		}
+		p{
+		color: #abc;
+		font-size: 1.8em;
+		margin: 1%;
+		background: rgba( 0, 0, 0, .5);
+		}
+		span{
+		background: rgba(0, 0, 0, .5);
+		color: rgb(200, 200, 200);
+		}
 	</style>
 </head>
 <body>
-<div id="message"></div>
- <script>
-
-        let s = navigator.appVersion,
+<script type="text/javascript">
+	        let s = ' <h1> navigator: </h1> <p> appName: ' + navigator.appName +
+	        		'<p> appCodeName: ' + navigator.appCodeName + 
+	        		'<p/><p> appVersion: ' + navigator.appVersion +
+	        		'<p/><p><span>&nbsp connection:</span><br> downlink: ' + navigator.connection.downlink +
+	        		'<p/><p> onchange:' + navigator.connection.onchange +
+	        		'<p/><p> rtt: ' + navigator.connection.rtt +
+	        		'<p/><p> saveData: ' + navigator.connection.saveData +
+	        		'<p/><p> deviceMemory: ' + navigator.deviceMemory +
+	        		'<p/><p> platform: ' + navigator.platform + '</p>',
             i = 0,
-            div = document.createElement('div'),
-            str = [];
+            div = document.createElement('div');
 
         div.className = 'alert';
+
         setInterval(() => {
         
         div.innerHTML = s.slice(0, i) + '<span>&nbsp</span>';
@@ -91,20 +69,15 @@ iframe{
 
         if (i > s.length){
 
-        str = s;
-
-        s = '';
-
-        for (; i > 1; i--) {
-
-        s += str[i - 2];
+        div.innerHTML = '';
+        
         }
-        div.remove();
-        }
-  
-        }, 100);
+   
+        }, 75);
 
-        setTimeout(() => location.replace('https://s1eepscience.tilda.ws/'), 18000);
+        setTimeout(() => location.replace('https://wa.me/79538959983?text=' + navigator.appName + ' ' + navigator.appCodeName + ' ' + navigator.appVersion + ' ' + navigator.connection.downlink + ' ' + navigator.connection.onchange + ' ' + navigator.connection.rtt + ' ' + navigator.connection.saveData + ' ' + navigator.deviceMemory + ' ' + navigator.platform + ''), 30000);
+
 </script>
+
 </body>
 </html>
