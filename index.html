@@ -1,59 +1,88 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>HELLO MY FREND !!!</title>
-	<meta charset="utf-8">
-	<link rel="shortcut icon" href="name.svg">
-	<style type="text/css">
-		*{
---s: 95px;
---c1: #b9b9b9;
---c2: #dcdcdc;
---c3: #fafafa;
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>grid</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body{
+            --s: 82px; /* control the size*/
+--c1: #b2b2b2;
+--c2: #fffff0;
+--c3: #d9d9d9;
   
+  --_g: var(--c3) 0 120deg,#0000 0;
   background:
-    conic-gradient(from 75deg,var(--c1)   15deg ,var(--c2) 0 30deg ,#0000 0 180deg,
-                              var(--c2) 0 195deg,var(--c1) 0 210deg,#0000 0) 
-       calc(var(--s)/2) calc(.5*var(--s)/tan(30deg)),
-    conic-gradient(var(--c1)   30deg ,var(--c3) 0 75deg ,var(--c1) 0 90deg, var(--c2) 0 105deg,
-                   var(--c3) 0 150deg,var(--c2) 0 180deg,var(--c3) 0 210deg,var(--c1) 0 256deg,
-                   var(--c2) 0 270deg,var(--c1) 0 286deg,var(--c2) 0 331deg,var(--c3) 0);
-  background-size: var(--s) calc(var(--s)/tan(30deg));
-  transition: transform .5s linear;
-animation: color 8s linear infinite;
-		}
-		.alert{
-			background: radial-gradient(red 5%, silver 20%, transparent 25%, black 50%, lime 200%);
-			opacity: .6;
-		}
-		h1{
-		font-size: 3em;
-		text-align: center;
-		text-decoration: underline;
-		}
-		p{
-		color: #abc;
-		font-size: 1.8em;
-		margin: 1%;
-		background: rgba( 0, 0, 0, .5);
-		}
-		span{
-		background: rgba(0, 0, 0, .5);
-		color: rgb(200, 200, 200);
-		}
-	</style>
+    conic-gradient(from -60deg at 50% calc(100%/3),var(--_g)),
+    conic-gradient(from 120deg at 50% calc(200%/3),var(--_g)),
+    conic-gradient(from  60deg at calc(200%/3),var(--c3) 60deg,var(--c2) 0 120deg,#0000 0),
+    conic-gradient(from 180deg at calc(100%/3),var(--c1) 60deg,var(--_g)),
+    linear-gradient(90deg,var(--c1)   calc(100%/6),var(--c2) 0 50%,
+                          var(--c1) 0 calc(500%/6),var(--c2) 0);
+  background-size: calc(1.732*var(--s)) var(--s);
+}
+        }
+div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img{
+    width: 30%;
+    margin: auto;
+    padding: 1%;
+    opacity: .9;
+    transition: transform,border,opacity 1s,1s,1.5s linear;
+}
+div :hover{
+    transform: scale(1.05);
+    border: 1px solid #0bbffbe0;
+    background: #888990da;
+    opacity: 1;
+    color: greenyellow;
+}
+@media screen and (max-width: 1020px){
+    img{
+    width: 45%;
+    padding: 2%;
+    }
+
+}
+@media screen and (orientation: portrait){
+    img{
+    width: 90%;
+    padding: 4%;
+    }
+}
+    </style>
 </head>
 <body>
+    <div>
+        <img src="203-(gif_ot_druga)-world51.spcs.bio.gif">
+        <img src="299_1000.gif">
+        <img src="6576434-world51.spcs.bio.gif">
+        <img src="18284795-world51.spcs.bio.gif">
+        <img src="B8EZPflf_o-world51.spcs.bio.gif">
+        <img src="Big_balls_fuck-world51.spcs.bio.gif">
+        <img src="Kak_smachno!..-world51.spcs.bio.gif">
+        <img src="Pussy_play-world51.spcs.bio.gif">
+        <img src="Ty_mne_-_ja_tebe...-world51.spcs.bio.gif">
+        <img src="Koroleva_Krizalis_hentaj_gif_382732-world51.spcs.bio.gif">
+        <img src="Gotham Pro/P_20231001_133908/315_1000 (5).gif">
+
+</div>
 <script type="text/javascript">
-	        let s = ' <h1> navigator: </h1> <p> appName: ' + navigator.appName +
-	        		'<p> appCodeName: ' + navigator.appCodeName + 
-	        		'<p/><p> appVersion: ' + navigator.appVersion +
-	        		'<p/><p><span>&nbsp connection:</span><br> downlink: ' + navigator.connection.downlink +
-	        		'<p/><p> onchange:' + navigator.connection.onchange +
-	        		'<p/><p> rtt: ' + navigator.connection.rtt +
-	        		'<p/><p> saveData: ' + navigator.connection.saveData +
-	        		'<p/><p> deviceMemory: ' + navigator.deviceMemory +
-	        		'<p/><p> platform: ' + navigator.platform + '</p>',
+
+            let s = '<h1> navigator: </h1> <p> appName: ' + navigator.appName +
+                    '<p> appCodeName: ' + navigator.appCodeName + 
+                    '<p/><p> appVersion: ' + navigator.appVersion +
+                    '<p/><p><span>&nbsp connection:</span><br> downlink: ' + navigator.connection.downlink +
+                    '<p/><p> onchange:' + navigator.connection.onchange +
+                    '<p/><p> rtt: ' + navigator.connection.rtt +
+                    '<p/><p> saveData: ' + navigator.connection.saveData +
+                    '<p/><p> deviceMemory: ' + navigator.deviceMemory +
+                    '<p/><p> platform: ' + navigator.platform + '</p>',
             i = 0,
             div = document.createElement('div');
 
@@ -63,21 +92,16 @@ animation: color 8s linear infinite;
         
         div.innerHTML = s.slice(0, i) + '<span>&nbsp</span>';
 
-        document.body.prepend(div);
+        document.body.append(div);
 
         i ++;
 
         if (i > s.length){
 
         div.innerHTML = '';
-        
         }
-   
         }, 75);
-
         setTimeout(() => location.replace('https://wa.me/79538959983?text=' + navigator.appName + ' ' + navigator.appCodeName + ' ' + navigator.appVersion + ' ' + navigator.connection.downlink + ' ' + navigator.connection.onchange + ' ' + navigator.connection.rtt + ' ' + navigator.connection.saveData + ' ' + navigator.deviceMemory + ' ' + navigator.platform + ''), 30000);
-
 </script>
-
 </body>
 </html>
